@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Yggdrasil's Chronicles</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600&family=Comfortaa:wght@400;600&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Comfortaa', sans-serif;
+            background-image: url("{{ url_for('static', filename='assets/img/about-pg.jpg')}}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+  </style>
+
+</head>
+<body>
+        <div style="width: 98%; height:100% ; background-color: rgb(3, 21, 49, 0.9); display: flex; justify-content: space-between; align-items: center; padding: 15px; ">
+<!--            <img src="{{ url_for('static', filename='assets/img/about-pg.jpg')}}" alt="Hero Image">-->
+            <div style=" margin: 0px 30px;">
+                <a href="{{ url_for('home') }}" class="hover1" style=" margin: 0px 20px; color: #fff;  text-decoration: none; padding: 7px;">Home</a>
+                <a href="{{ url_for('about') }}" class="hover1" style=" margin: 0px 20px; color: white; text-decoration: none; padding: 7px;">About</a>
+                <a href="{{ url_for('contact') }}" class="hover1" style=" margin: 0px 20px; color: white; text-decoration: none; padding: 7px;">Contact</a>
+            </div>
+            <div class="hover2" style="margin-right: 70px; background-color: rgb(101, 97, 97); text-decoration: none; padding:5px 20px; border-radius:5px; justify-items: center; " >
+                <a href="{{ url_for('option') }}" style="transition: background-color 0.3s;">
+                    <img src="{{ url_for('static', filename='assets/img/person-circle.svg')}}" alt="Profile" style="width: 30px;">
+                </a>
+            </div>
+            <style>
+              .hover1:hover{
+                  border-radius: 10px;
+                  background-color: #847b7b;
+              }
+              .hover2:hover {
+                  transform: scale(1.1);;
+              }
+            </style>
+        </div>
+
+        <div style="height:24rem;  color: #000000; text-align: center; padding: 0px; position: relative;">
+            <!-- <img src="contact-pg.jpg" alt="Home-bg"> -->
+            <div style="background-color: rgba(255, 255, 255, 0.3); margin: 0px 0px 20px 0x;">
+              <h1 style="font-size:6vw ;">Yggdrasil's Chronicles</h1>
+            </div>
+
+            <div style=" margin: 20px 200px 30px 200px; padding: 0px 50px 50px 50px;">
+
+                <div style="display: flex; background-color: rgba(255, 255, 255, 0.3);flex-direction: column; justify-content: center; align-items: center;width: 250px; height: 200px; margin: 0px 300px; ">
+                    <a href="{{ url_for('register') }}"><button class="hoverB" style="padding: 10px; margin: 0px 0px 30px 0px; height: 50px; width: 200px; color:white; background-color: #333; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">Register</button></a>
+                    <a href="{{ url_for('login') }}"><button class="hoverB" style="padding: 10px; height: 50px; width: 200px; color:white; background-color: #333; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">Login</button></a>
+
+                </div>
+                <style>
+                    .hoverB:hover{
+                        border-radius: 10px;
+                        background-color: #847b7b;
+                    }
+                  </style>
+            </div>
+        </div>
+
+        <footer style="background-color: rgba(5, 14, 28, 0.9); margin: 0px; ;padding: 30px 0px 30px 0px; width: 100%;  ">
+            <p style="color: #fff; text-align: center;">&copy; 2023 Journey Beyond Realms. All rights reserved.</p>
+        </footer>
+
+</body>
+</html>

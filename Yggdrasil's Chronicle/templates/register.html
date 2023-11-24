@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Yggdrasil's Chronicles</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600&family=Comfortaa:wght@400;600&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Comfortaa', sans-serif;
+            background-image: url("{{ url_for('static', filename='assets/img/about-pg.jpg')}}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+  </style>
+
+</head>
+
+<body>
+        <div style="width: 100%; height:100% ; background-color: rgb(3, 21, 49, 0.9); display: flex; justify-content: space-between; align-items: center; padding: 15px; ">
+            <div style=" margin: 0px 30px;">
+                <a href="{{ url_for('home') }}" class="hover1" style=" margin: 0px 20px; color: #fff;  text-decoration: none; padding: 7px;">Home</a>
+                <a href="{{ url_for('about') }}" class="hover1" style=" margin: 0px 20px; color: white; text-decoration: none; padding: 7px;">About</a>
+                <a href="{{ url_for('contact') }}" class="hover1" style=" margin: 0px 20px; color: white; text-decoration: none; padding: 7px;">Contact</a>
+            </div>
+            <div class="hover2" style="margin-right: 70px; background-color: rgb(101, 97, 97); text-decoration: none; padding:5px 20px; border-radius:5px; justify-items: center; " >
+                <a href="{{ url_for('option') }}" style="transition: background-color 0.3s;">
+                    <img src="{{ url_for('static', filename='assets/img/person-circle.svg')}}" alt="Profile" style="width: 30px;">
+                </a>
+            </div>
+            <style>
+              .hover1:hover{
+                  border-radius: 10px;
+                  background-color: #847b7b;
+              }
+              .hover2:hover {
+                  transform: scale(1.1);;
+              }
+            </style>
+        </div>
+
+        <div style="height:50rem;  color: #ffffff; text-align: center; line-height: 100px; padding: 0px; position: relative;">
+            <!-- <img src="contact-pg.jpg" alt="Home-bg"> -->
+            <div style="background-color: rgba(162, 160, 160, 0); margin: 0px 0px 0px 0x; display: flex; flex-direction: column; gap: 0px; justify-content: space-between;">
+              <h1 style="font-size:6vw ;  margin: 15px 0px 15px 0px; ">Yggdrasil's Chronicles</h1>
+              <!-- <h1 style=" font-size: 6vw 0px; padding: 0px;  margin: 0px 0px 5px 0px; background-color: rgba(162, 160, 160, 0.1);">Register</h1> -->
+            </div>
+           <div style=" margin: 0px 200px 30px 200px; padding: 0px 50px 10px 50px;">
+
+
+                <div style="display:flex; flex-direction: column; width:400px; background-color: rgba(93, 87, 87, 0.5); justify-items: center; align-items: center; margin: 0px 50px 0px 200px;  border-radius: 10px; position: relative;">
+                    <h1 style=" font-size: 6vw 0px; padding: 0px;  margin: 0px 0px 0px 0px; "><u>Register</u></h1>
+                    <form action="#" method="post" style=" display: flex; flex-direction: column; padding:0px 50px 50px 50px; gap: 10px;" >
+                        <label for="name" style=" height: 50px;  justify-items: center; align-items: center; margin: 0px 10px 10px 10px;">Name:</label>
+                        <input type="text" id="name" name="name" required style="align-items: center; margin:0px 150px; width:300px; border-radius: 15px; height:40px;">
+
+                        <label for="email" style=" height: 50px; justify-items: center; align-items: center; margin: 0px 10px 10px 10px;">Email:</label>
+                        <input type="email" id="email" name="email" required style="border-radius: 15px; height:40px; margin:0px 150px; width:300px;">
+
+                        <label for="password" style=" height: 50px; justify-items: center; align-items: center; margin: 0px 10px 10px 10px;">Password:</label>
+                        <input type="password" id="password" name="password" required style="border-radius: 15px; height:40px; margin:0px 150px; width:300px;">
+                    </form>
+                </div>
+
+                <div>
+                    <!-- <button class="hoverB" style="padding: 10px; height: 50px; width: 200px; color:white; background-color: #333; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">See More</button> -->
+                    <a href="{{ url_for('option') }}"><button class="hoverB" style="padding: 10px; height: 50px; width: 200px; color:white; background-color: rgba(93, 87, 87, 0.9); border: none; border-radius: 5px; cursor: pointer; transition:0.3s;">Sign me up</button></a>
+                    <style>
+                      .hoverB:hover{
+                          border-radius: 10px;
+                          background-color: #847b7b;
+                      }
+                      /* .hoverB:hover {
+                          transform: scale(1.1);;
+                      } */
+                    </style>
+                </div>
+
+            </div>
+        </div>
+
+        <footer style="background-color: rgba(5, 14, 28, 0.9); padding: 25px; width: 100%;  ">
+            <p style="color: #fff; text-align: center;">&copy; 2023 Journey Beyond Realms. All rights reserved.</p>
+        </footer>
+
+</body>
+</html>

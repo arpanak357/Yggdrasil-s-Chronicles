@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Yggdrasil's Chronicles</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./static/css/styles.css">
+</head>
+<body>
+
+<div class="navbar">
+  <div class="left-options">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <!-- <a href="cont.html">Cont</a> -->
+  </div>
+  <div class="right-options">
+    <a href="{{ url_for('option') }}" class="profile btn btn-secondary " tabindex="-1" role="button" aria-disabled="true">
+        <img src="{{ url_for('static', filename='assets/img/person-circle.svg')}}" alt="Profile">
+    </a>
+  </div>
+</div>
+
+
+<div class="hero-section">
+    <img src="{{ url_for('static', filename='assets/img/home-pg.jpg')}}" alt="Hero Image">
+    <div class="overlay">
+        <div>
+            <h1 style="font-size: 5rem;">Yggdrasil's Chronicles</h1>
+            <h3>Embark on an interdimensional Norse journey, blogging cosmic tales.</h3>
+        </div>
+        <div class="buttons">
+            <a href="{{ url_for('show') }}"><button class="see-more">See Blogs</button></a>
+            <a href="{{ url_for('option') }}"><button class="get-started">Get Started</button></a>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <p>&copy; 2023 Journey Beyond Realms. All rights reserved.</p>
+</footer>
+
+    <script src="https://kit.fontawesome.com/1166b46edd.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
